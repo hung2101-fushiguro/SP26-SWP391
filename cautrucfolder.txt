@@ -1,0 +1,71 @@
+ClickEat_Project
+├── .idea/                          # Cấu hình của IntelliJ (Tự sinh)
+├── src/
+│   ├── main/
+│   │   ├── java/                   # SOURCE CODE JAVA
+│   │   │   └── com.clickeat/
+│   │   │       ├── config/         # Cấu hình hệ thống
+│   │   │       │   └── DBContext.java       # Kết nối SQL Server
+│   │   │       │
+│   │   │       ├── model/          # (MODEL) Ánh xạ các bảng trong DB
+│   │   │       │   ├── User.java            # Map với bảng [Users]
+│   │   │       │   ├── Order.java           # Map với bảng [Orders]
+│   │   │       │   ├── FoodItem.java        # Map với bảng [FoodItems]
+│   │   │       │   └── ... (Các class khác)
+│   │   │       │
+│   │   │       ├── dal/            # (DATA ACCESS LAYER) Giao tiếp DB
+│   │   │       │   ├── interfaces/ # (INTERFACE) Định nghĩa hành động
+│   │   │       │   │   ├── IGenericDAO.java # Interface chung (CRUD)
+│   │   │       │   │   └── IUserDAO.java    # Interface riêng cho User
+│   │   │       │   │
+│   │   │       │   └── impl/       # (DAO IMPLEMENTATION) Code thực thi
+│   │   │       │       ├── AbstractDAO.java # Class cha chứa logic chung
+│   │   │       │       ├── UserDAO.java     # Code SQL cho User
+│   │   │       │       └── OrderDAO.java    # Code SQL cho Order
+│   │   │       │
+│   │   │       ├── service/        # (BUSINESS LOGIC) Xử lý nghiệp vụ
+│   │   │       │   ├── UserService.java     # Logic đăng ký, đăng nhập
+│   │   │       │   └── AIService.java       # Logic gợi ý món, auto-cart
+│   │   │       │
+│   │   │       ├── controller/     # (CONTROLLER/SERVLET) Điều hướng
+│   │   │       │   ├── auth/       # Các Servlet xác thực
+│   │   │       │   │   ├── LoginServlet.java
+│   │   │       │   │   └── RegisterServlet.java
+│   │   │       │   ├── admin/      # Các Servlet cho Admin
+│   │   │       │   │   ├── DashboardServlet.java
+│   │   │       │   │   └── MerchantApprovalServlet.java
+│   │   │       │   └── web/        # Các Servlet cho Khách hàng
+│   │   │       │       ├── HomeController.java
+│   │   │       │       └── OrderController.java
+│   │   │       │
+│   │   │       ├── filter/         # Bộ lọc bảo mật
+│   │   │       │   └── AuthFilter.java      # Chặn truy cập trái phép
+│   │   │       │
+│   │   │       └── utils/          # Tiện ích bổ trợ
+│   │   │           ├── PasswordUtils.java   # Mã hóa mật khẩu
+│   │   │           └── EmailUtils.java      # Gửi email
+│   │   │
+│   │   ├── resources/              # File cấu hình (nếu có)
+│   │   │   └── database.properties # Chứa user/pass DB (tùy chọn)
+│   │   │
+│   │   └── webapp/                 # (VIEW) Giao diện người dùng
+│   │       ├── assets/             # File tĩnh
+│   │       │   ├── css/            # File .css
+│   │       │   ├── js/             # File .js
+│   │       │   └── img/            # Hình ảnh
+│   │       ├── views/              # Chứa các file JSP
+│   │       │   ├── admin/          # Giao diện Admin
+│   │       │   │   └── dashboard.jsp
+│   │       │   ├── web/            # Giao diện Khách
+│   │       │   │   ├── home.jsp
+│   │       │   │   └── login.jsp
+│   │       │   └── common/         # Thành phần dùng chung
+│   │       │       ├── header.jsp
+│   │       │       └── footer.jsp
+│   │       ├── META-INF/
+│   │       └── WEB-INF/
+│   │           └── web.xml         # Cấu hình Mapping Servlet
+│   │
+│   └── test/                       # Unit Test
+├── pom.xml                         # Quản lý thư viện Maven
+└── README.md                       # Hướng dẫn chạy dự án
