@@ -13,7 +13,7 @@ public class UserDAO extends AbstractDAO<User> implements IUserDAO {
     protected User mapRow(ResultSet rs) throws SQLException {
         User user = new User();
         user.setId(rs.getInt("id"));
-        user.setFullName(rs.getString("fullname"));
+        user.setFullName(rs.getString("full_name"));
         user.setEmail(rs.getString("email"));
         user.setPhone(rs.getString("phone"));
         user.setPasswordHash(rs.getString("password_hash"));
