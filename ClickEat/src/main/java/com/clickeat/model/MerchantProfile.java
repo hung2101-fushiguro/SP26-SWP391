@@ -9,11 +9,11 @@ public class MerchantProfile {
     private String shopName;
     private String shopPhone;
     private String shopAddressLine;
-    private int provinceCode;
+    private String provinceCode;
     private String provinceName;
-    private int districtCode;
+    private String districtCode;
     private String districtName;
-    private int wardCode;
+    private String wardCode;
     private String wardName;
     private double latitude;
     private double longitude;

@@ -11,11 +11,11 @@ public class Address {
     private String receiverName;
     private String receiverPhone;
     private String addressLine;
-    private int provinceCode;
+    private String provinceCode;
     private String provinceName;
-    private int districtCode;
+    private String districtCode;
     private String districtName;
-    private int wardCode;
+    private String wardCode;
     private String wardName;
     private double latitude;
     private double longitude;
