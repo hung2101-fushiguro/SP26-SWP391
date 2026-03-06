@@ -1,0 +1,37 @@
+# ===== Maven / Java =====
+target/
+*.class
+*.war
+*.jar
+*.ear
+*.nar
+hs_err_pid*
+
+# ===== Node / React (Merchant frontend) =====
+node_modules/
+Merchant/node_modules/
+Merchant/dist/
+Merchant/.env
+Merchant/.env.local
+Merchant/.env.*.local
+
+# ===== IDE =====
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+$PROJDIR_BACKUP/
+
+# ===== Logs =====
+*.log
+npm-debug.log*
